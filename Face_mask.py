@@ -86,8 +86,8 @@ def detectAndDisplay(frame,img ,eyes_center_locations):
     cv.imshow('Capture - Face detection', frame)
 
 parser = argparse.ArgumentParser(description='Code for Cascade Classifier tutorial.')
-parser.add_argument('--face_cascade', help='Path to face cascade.', default='/Users/phuminsathipchan/Desktop/งานมหาลัย/ฝึกPython/openCV/haarcascade_frontalface_alt2.xml')
-parser.add_argument('--eyes_cascade', help='Path to eyes cascade.', default='/Users/phuminsathipchan/Desktop/งานมหาลัย/ฝึกPython/openCV/haarcascade_eye_tree_eyeglasses.xml')
+parser.add_argument('--face_cascade', help='Path to face cascade.', default='/Users/phuminsathipchan/Desktop/งานมหาลัย/ฝึกPython/Detect_Face/haarcascade_frontalface_alt2.xml')
+parser.add_argument('--eyes_cascade', help='Path to eyes cascade.', default='/Users/phuminsathipchan/Desktop/งานมหาลัย/ฝึกPython/Detect_Face/haarcascade_eye_tree_eyeglasses.xml')
 parser.add_argument('--camera', help='Camera divide number.', type=int, default=0)
 args = parser.parse_args()
 face_cascade_name = args.face_cascade
@@ -113,7 +113,7 @@ eyes_center_locations = [(0,0),(0,0)]
 while True:
     ret, frame = cap.read()
     # รูปหน้ากาก
-    img = cv.imread("/Users/phuminsathipchan/Desktop/งานมหาลัย/ฝึกPython/openCV/7zjv1v_large.png")
+    img = cv.imread("/Users/phuminsathipchan/Desktop/งานมหาลัย/ฝึกPython/Detect_Face/7zjv1v_large.png")
     if frame is None:
         print('--(!) No captured frame -- Break!')
         break
